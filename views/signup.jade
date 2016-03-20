@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .container-fluid
+    include ../includes/logo
+    .row.nav
+      p  
+        span(class="navglyphs") gimmegimme 
+    .row
+      .col-sm-12.col-md-4.col-xl-3.col-md-offset-4
+        br
+        form(action="/users" method="post")
+          .form-group
+            input.form-control(type='text' name='user_name' placeholder='Choose a User Name')
+          .form-group
+            input.form-control(type='password' name='user_password' placeholder='Choose a Password')
+          .form-group.footer
+            button.btn.btn-warning#clickmeclickme1.form-control(type='submit') Sign Up 
+  script(src="https://code.jquery.com/jquery-2.2.0.min.js")
+  script(type='text/javascript', src='/javascripts/validatesignup.js')

@@ -1,0 +1,42 @@
+.col-sm-12.col-md-4.col-xl-3.pull-left
+  .form-group.hidden
+    if user
+      p
+        input(type="text" id="userid" name='user_id' value= (want ? want.user_id : parseInt(user.id)))
+  .form-group
+    p
+      label(for="name") Name
+      br
+      input.form-control(type="text" id="name" name='name' placeholder="Name" value= (want ? want.name : ''))
+  .form-group
+    p
+      label(for="price") Price
+      br
+      input.form-control(type="text" id="price" name='price' placeholder="$$$" value= (want ? want.price : ''))
+    .formerrorsss
+      include ./errors
+.col-sm-12.col-md-4.col-xl-3.pull-left      
+  .form-group
+    p
+      label(for="images") Images
+      br
+      input.form-control(type="text" id="images" name='images' placeholder="Image URL" value= (want ? want.images : ''))
+  .form-group  
+    p
+      label(for="links") Links
+      br
+      input.form-control(type="text" id="links" name='links' placeholder="Link URL" value= (want ? want.links : ''))
+.col-sm-12.col-md-4.col-xl-3.pull-left
+  .form-group
+    p
+      label(for="notes") Notes
+      br
+      textarea.form-control(rows="2" id='notes' name='notes')= (want) ? want.notes : ''
+  .form-group
+    p  
+    select.form-control(name="category" id="category")
+      option(value="1" selected=(want ? (want.category === "1" ? "selected" : undefined) : undefined)) Apparel
+      option(value="2" selected=(want ? (want.category === "2" ? "selected" : undefined) : undefined)) Housewares
+      option(value="3" selected=(want ? (want.category === "3" ? "selected" : undefined) : undefined)) Miscellaneous 
+      option(value="4" selected=(want ? (want.category === "4" ? "selected" : undefined) : undefined)) Technology
+  

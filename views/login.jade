@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .container-fluid
+    include ../includes/logo
+    .row
+      .nav
+        p  
+          span(class="navglyphs") gimmegimme 
+
+    .row
+      .col-sm-12.col-md-4.col-xl-3.col-md-offset-4
+        br
+        form(action="/login" method="post")
+          .form-group
+            input.form-control(type='text' name='user_name' placeholder="username")
+          .form-group
+            input.form-control(type='password' name='user_password' placeholder="password")
+          .form-group.footer
+            p
+              input.btn.btn-default#clickmeclickme2.form-control(type='submit' value='Login')
+            p
+              a.btn.form-control.btn-warning(href="/users/new" id="sssignup") Sign Up
+  script(src="https://code.jquery.com/jquery-2.2.0.min.js")
+  script(type='text/javascript', src='/javascripts/validatelogin.js')

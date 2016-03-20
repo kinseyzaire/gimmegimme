@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  .container-fluid
+    include ../../includes/nav
+    .row
+      .col-xl-12
+        br
+      if want
+        form(method="POST" action="/#{user.user_name}/wants/#{want.id}")
+          .hidden
+            input(type="number" id="id" name='id' value= (want ? want.id : undefined))
+          include ../../includes/form
+          .form-group.footer
+            button.btn.btn-default(id="submitnewwant" type="submit") Submit 
+            a.btn.btn-danger(href="/wants") Cancel

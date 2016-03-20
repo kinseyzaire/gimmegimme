@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  .container-fluid
+    include ../includes/logo
+    include ../includes/nav
+
+    br
+    .row
+      .newwant#newwant.col-md-12.col-lg-12.col-xl-12.pull-left
+        form(method="POST" action="/#{user.user_name}/wants")
+          include ../includes/form
+          .form-group.footer
+            .pull-right       
+              button.btn.btn-default(id="submitnewwant" type="submit") Submit 
+              .btn.btn-danger(id="cancelwant") Cancel
+
+  if wants
+    for want in wants
+      .want.col-sm-12.col-md-4.col-xl-3.pull-left
+        hr(class="categorycolor#{want.category}")
+        img(src="#{want.images}")
+        h3 #{want.name}
+        hr(class="categorycolor#{want.category}")
+        .col-xs-8.pull-left
+          p #{want.notes}
+        .wantlinks.col-xs-4.pull-right
+          p  
+            h1 $#{want.price} 
+            a.glyphicon.glyphicon-cog(href="/#{user.user_name}/wants/#{want.id}/edit") 
+            a.glyphicon.glyphicon-trash(href="/#{user.user_name}/wants/#{want.id}/delete") 
+            a.glyphicon.glyphicon-shopping-cart(href="#{want.links}") 

@@ -1,0 +1,97 @@
+* {
+  /*border: 1px solid red;*/
+}
+
+body {
+  padding: 0;
+  font: 14px, Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: grey;
+}
+
+a.logout {
+  text-decoration: none;
+}
+
+a.logout:hover {
+  text-decoration: none;
+  color: white;
+}
+
+a.glyphicon {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+img {
+  width: 100%;
+}
+
+.nav {
+  text-align: center;
+  background-color: black;
+  color: white;
+  font: 50px "Kaushan Script", Helvetica, Arial, sans-serif;
+}
+
+.logo {
+    background-image: url("/images/gold.jpg");
+    background-attachment: fixed;
+}
+
+.want {
+  height: 600px;
+}
+
+.wantlinks {
+  text-align: right;
+}
+
+/*.logoutlink {
+  transform: rotate(-90deg);
+  position: inherit;
+  margin-top: -50px;
+  text-align: right;
+}*/
+
+
+
+/*APPAREL*/
+.categorycolor1 {
+  height: 6px;
+  background-color: steelblue;
+}
+
+/*HOUSEWARES*/
+.categorycolor2 {
+  height: 6px;
+  background-color: tomato;
+}
+
+/*Miscellaneous*/
+.categorycolor3 {
+  height: 6px;
+  background-color: slategray;
+}
+
+/*Technology*/
+.categorycolor4 {
+  height: 6px;
+  background-color: seagreen;
+}
+
+@media(min-width:1201px){.navglyphs { margin-left:34%; margin-right:34%; }}
+@media(max-width:1200px){.navglyphs { margin-left:30%; margin-right:30%; }}
+@media(max-width:1000px){.navglyphs { margin-left:28%; margin-right:28%; }}
+@media(max-width:892px){.navglyphs { margin-left:25%; margin-right:25%; }}
+@media(max-width:767px){.navglyphs { margin-left:15%; margin-right:15%; }}
+@media(max-width:667px){.navglyphs { margin-left:8%; margin-right:8%; }}
+@media(max-width:568px){.navglyphs { margin-left:15px; margin-right:15px; }}
+
+
+
+@media(min-width:569px){.logoutlink {transform: rotate(-90deg); position: inherit; margin-top: -50px; text-align: right;}}
+@media(max-width:568px){.logoutlink {position: inherit; margin-top: 10px; margin-right: 10px; text-align: right;}}

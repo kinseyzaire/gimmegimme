@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  .container-fluid
+    //- include ../../includes/logo
+    include ../../includes/listnav
+    br
+    if wants
+      for want in wants
+        .row
+          .col-lg-12
+            .pull-right
+              h4 
+                a.glyphicon.glyphicon-cog(href="/wants/#{want.id}/edit")  
+                a.glyphicon.glyphicon-trash(href="/wants/#{want.id}/delete")                  
+                a.glyphicon.glyphicon-shopping-cart(href="#{want.links}") 
+                $#{want.price} #{want.name} #{want.notes} 
+            .col-xs-1.pull-left
+              img(src="#{want.images}" class="thumb")
+            hr(class="categorycolor#{want.category}")
